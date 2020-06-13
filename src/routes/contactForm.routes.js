@@ -20,7 +20,7 @@ router.post('/', async (req, res) =>{
         fecha: req.body.fecha,
         idea: req.body.idea,
     }
-    const result = await db.collection('contacto').insert(clientData);
+    const result = await db.collection('contacto').insertOne(clientData);
     res.json(result.ops[0])
 })
 
